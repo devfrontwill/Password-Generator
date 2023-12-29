@@ -1,10 +1,20 @@
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import { Feather } from '@expo/vector-icons';
+import * as Clipboard from 'expo-clipboard';
 
 export function PasswordItem({ data, removePassword }) {
+
+    const copyPassword = async () => {
+        await Clipboard.setStringAsync(data);
+        alert('Senha copiada com sucesso');
+    }
+
     return (
         <View style={styles.container} >
-            <Text style={styles.text}>{data}</Text>
+            <Pressable onPress={copyPassword} >
+                <Text style={styles.text}>{data}</Text>
+            </Pressable>
+
             <Pressable onPress={removePassword} >
                 <Feather
                     name='trash'
@@ -29,5 +39,8 @@ const styles = StyleSheet.create({
     },
     text: {
         color: '#fff'
+    },
+    clipboard: {
+
     }
 })

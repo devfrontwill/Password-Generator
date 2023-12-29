@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "key-locker",
+    "name": "Key Locker",
     "slug": "key-locker",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.devfrontwill.keylocker"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "354e6317-f008-4eb1-bd04-4fae1d379f78"
+      }
     }
   }
 }

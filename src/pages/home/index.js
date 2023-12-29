@@ -7,7 +7,7 @@ let charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@!.
 
 export function Home() {
     const [size, setSize] = useState(10);
-    const [passwordValue, setPasswordValue] = useState("");
+    const [passwordValue, setPasswordValue] = useState('');
     const [modalVisible, setModalVisible] = useState(false);
 
     function generatePassword() {
